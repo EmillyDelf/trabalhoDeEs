@@ -1,29 +1,36 @@
 public class Vetor {
 
-    private String[] Elementos;
+    private String[] elementos;
     private int capacidade;
 
-    public Vetor(int capacidade) {
-
+    public Vetor(int tamanho) {
+        elementos = new String[tamanho];
         this.capacidade = 0;
 
 
     }
 
     public void adicionar(String pergunta){;
-        String[] Elemento = {pergunta};
-        setElementos(Elemento);
 
-        for (String e : Elemento){
-            System.out.println(e);
+        if (capacidade < elementos.length) {
+            elementos[capacidade] = pergunta;
+            capacidade++;
+
+
         }
     }
 
     public void estaVazia(){
-        if (getElementos() == null){
-            System.out.println(true);
-        }else {
+        if (capacidade == 0){
             System.out.println(false);
+        }else {
+            System.out.println(true);
+        }
+    }
+
+    public void imprimeUmPorLinha(){
+        for (int i = 0; i < capacidade; i++) {
+            System.out.println(elementos[i]);
         }
     }
 
@@ -37,10 +44,10 @@ public class Vetor {
     }
 
     public String[] getElementos() {
-        return Elementos;
+        return elementos;
     }
 
     public void setElementos(String[] elementos) {
-        Elementos = elementos;
+        elementos = elementos;
     }
 }
