@@ -2,22 +2,30 @@ package Atividade_A;
 
 public class Main {
     public static void main(String[] args) {
-        Vetor e1 = new Vetor(5);
 
-        e1.adicionar("Luiz");
-        e1.adicionar("luyd");
-        e1.adicionar("Alysson");
-        e1.estaVazia();
-        e1.imprimeUmPorLinha();
+        System.out.println("Executando TesteVetorB1...");
+        TesteVetorB1.main(args);
 
-        System.out.println("Ultimo do vetor: " + e1.ultimo());
-        System.out.println(e1.contem("Luiz"));
-        System.out.println(e1.contem("Vaca"));
+        System.out.println("\n---------------------------\n");
 
-        System.out.println(" ");
+        System.out.println("Executando TesteVetorB2...");
+        TesteVetorB2.main(args);
 
-        System.out.println(e1.busca("Luiz"));
-        System.out.println(e1.busca("Boi"));
+        System.out.println("Executando TesteVetorB3...");
+        TesteVetorB3.main(args);
+
+        System.out.println("\n---------------------------\n");
+
+        System.out.println("Executando TesteVetorC4...");
+        TesteVetorC4.main(args);
+
+        System.out.println("Executando TesteVetorC5...");
+        TesteVetorC5.main(args);
+
+        System.out.println("\n---------------------------\n");
+
+        System.out.println("Executando TesteVetorC6...");
+        TesteVetorC6.main(args);
 
     }
 }

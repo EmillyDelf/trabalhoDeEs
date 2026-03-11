@@ -11,7 +11,7 @@ public class TesteVetorC5 {
         vetor.adicionar("BMW");
         vetor.adicionar("Mclaren");
         vetor.adicionar("Ferrari");
-
+        vetor.imprimeUmPorLinha();
         System.out.println("Item BMW repetido: " + vetor.contarOcorrencias("BMW"));
         System.out.println("Item Mclaren repetido: " + vetor.contarOcorrencias("Mclaren"));
     }
