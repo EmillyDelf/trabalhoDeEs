@@ -1,19 +1,17 @@
-package Atividade_A.TesteC;
+package Atividade_A;
 
-import Atividade_A.Vetor;
 
-public class TesteVetor4 {
+
+public class TesteVetorC6 {
     static void main(String[] args) {
         Vetor vetor = new Vetor(5);
 
-        vetor.adicionar("CG_150");
-        vetor.adicionar("Biz_125");
-
+        vetor.adicionar("Coca_Cola");
+        vetor.adicionar("Guarana");
         System.out.println("Vetor: ");
         vetor.imprimeUmPorLinha();
 
-        vetor.limpar();
-
+        vetor.substituir("Coca_Cola","Pepsi");
         System.out.println("Vetor: ");
         vetor.imprimeUmPorLinha();
     }

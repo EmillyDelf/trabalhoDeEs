@@ -1,4 +1,4 @@
-package Atividade_D.TesteD;
+package Atividade_D;
 
 public class TesteVetor7 {
 

@@ -1,8 +1,8 @@
-package Atividade_A.TesteB;
+package Atividade_A;
 
-import Atividade_A.Vetor;
 
-public class TesteVetor3 {
+
+public class TesteVetorB3 {
     static void main(String[] args) {
         Vetor vetor = new Vetor(5);
         try {
