@@ -1,8 +1,7 @@
-package Atividade_F;
+package Atividade_F_Final;
 
 public class Main {
-
-    public static void main(String[] args) {
+    static void main(String[] args) {
 
         Vetor vetor = new Vetor(10);
         System.out.println("TesteVetor11 - adicionar várias vezes");
