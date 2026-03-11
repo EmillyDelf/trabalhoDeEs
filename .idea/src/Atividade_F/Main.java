@@ -4,14 +4,27 @@ public class Main {
 
     public static void main(String[] args) {
 
-        System.out.println("Executando TesteVetor9...");
-        TesteVetor9.main(args);
+        Vetor vetor = new Vetor(10);
+        System.out.println("TesteVetor11 - adicionar várias vezes");
 
-        System.out.println("\n---------------------------\n");
+        vetor.adicionarSeNaoExiste("A");
+        vetor.adicionarSeNaoExiste("A");
+        vetor.adicionarSeNaoExiste("A");
 
-        System.out.println("Executando TesteVetor10...");
-        Testevetor10.main(args);
+        vetor.mostrar();
 
+        Vetor vetor1 = new Vetor(10);
+
+        vetor1.adiciona("A");
+        vetor1.adiciona("C");
+        vetor1.adiciona("D");
+
+        System.out.println("\nVetor inicial:");
+        vetor1.mostrar();
+        System.out.println("\nTesteVetor12 - inserir depois");
+
+        vetor.inserirDepois("A", "B");
+
+        vetor1.mostrar();
     }
 }
-

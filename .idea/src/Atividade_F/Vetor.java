@@ -1,5 +1,7 @@
 package Atividade_F;
 
+import java.util.Arrays;
+
 public class Vetor {
     private String[] elementos;
     private int tamanho;
@@ -14,86 +16,62 @@ public class Vetor {
         this.tamanho++;
     }
 
-    public int tamanho() {
-        return this.tamanho;
+
+    public boolean inserirDepois(String referencia, String novoElemento) {
+
+        for (int i = 0; i < tamanho; i++) {
+
+            if (elementos[i].equals(referencia)) {
+
+
+                if (tamanho == elementos.length) {
+                    return false;
+                }
+
+
+                for (int j = tamanho; j > i + 1; j--) {
+                    elementos[j] = elementos[j - 1];
+                }
+
+                elementos[i + 1] = novoElemento;
+                tamanho++;
+
+                return true;
+            }
+        }
+
+        return false;
     }
 
-    public int busca(String elemento) {
+    public boolean adicionarSeNaoExiste(String elemento) {
 
         for (int i = 0; i < tamanho; i++) {
             if (elementos[i].equals(elemento)) {
-                return i;
+                return false;
             }
         }
 
-        return -1;
-    }
 
-    public void remove(int posicao) {
-
-        if (posicao < 0 || posicao >= tamanho) {
-            throw new IllegalArgumentException("Posição inválida");
+        if (tamanho < elementos.length) {
+            elementos[tamanho] = elemento;
+            tamanho++;
+            return true;
         }
 
-        for (int i = posicao; i < tamanho - 1; i++) {
-            elementos[i] = elementos[i + 1];
-        }
-
-        tamanho--;
-
-        elementos[tamanho] = null;
+        return false;
     }
 
-    public boolean remove(String elemento) {
-
-        int pos = busca(elemento);
-
-        if (pos == -1) {
-            return false;
+    public void mostrar(){
+        for (int i = 0; i < tamanho; i++) {
+            System.out.println(elementos[i]);
         }
-
-        remove(pos);
-
-        return true;
     }
 
-    // PARTE 13
-    public int indiceUltimo(String elemento) {
-
-        for (int i = tamanho - 1; i >= 0; i--) {
-            if (elementos[i].equals(elemento)) {
-                return i;
-            }
-        }
-
-        return -1;
-    }
-
-    // PARTE 14
-    public void removerTodos(String elemento) {
-
-        while (remove(elemento)) {
-
-        }
-
-    }
-
+    @Override
     public String toString() {
-
-        StringBuilder s = new StringBuilder();
-        s.append("[");
-
-        for (int i = 0; i < tamanho; i++) {
-            s.append(elementos[i]);
-
-            if (i < tamanho - 1) {
-                s.append(", ");
-            }
-        }
-
-        s.append("]");
-
-        return s.toString();
+        return "Vetor{" +
+                "elementos=" + Arrays.toString(elementos) +
+                ", tamanho=" + tamanho +
+                '}';
     }
 }
-
