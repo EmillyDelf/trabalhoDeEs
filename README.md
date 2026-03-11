@@ -104,12 +104,15 @@
 
 -----------------------------------------------------------------------------------------
 
-    <h1>
-        Atividade 2 / D E F
-    </h1>
-    <h3> Main principal </h3>
-    <p> 
+  <h1>
+    Atividade 2 / D E F
+</h1>
 
+<h3>
+    Main principal
+</h3>
+
+<p>
 package Atividade_D;
 
 public class Main {
@@ -126,9 +129,12 @@ public class Main {
     }
 }
 </p>
-    <h3> Vetor principal </h3>
-    <p>
-        
+
+<h3>
+    Vetor principal
+</h3>
+
+<p>
 package Atividade_D;
 
 public class Vetor {
@@ -208,8 +214,3 @@ public class Vetor {
     }
 }
 </p>
-    }
-
-</p>
-
-
